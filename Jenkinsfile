@@ -8,8 +8,8 @@ pipeline {
         stage('Build') {
             steps {
                 checkout scm
-                dir('jenkinsdemo/jenkinsdemojava') {
-                    bat 'mvn clean package'
+                dir('jenkinsdemo') {
+                    bat 'mvn -f jenkinsdemojava/pom.xml clean package'
                 }
             }
         }
