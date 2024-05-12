@@ -7,6 +7,7 @@ pipeline {
     stages {
         stage('Build') {
             steps {
+                checkout scm
                 dir('jenkinsdemo/jenkinsdemojava') {
                     bat 'mvn clean package'
                 }
